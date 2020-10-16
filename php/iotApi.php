@@ -76,14 +76,14 @@ if (isset($_POST['token'])) {
         if (((int) date("i") >= 0 && (int) date("i") < 5) || $heavyRainFlg) {
             $historyImgPath = '../img/camera/history/' . $placeId . '/' . (string) date('YmdH0000') . '.jpg';
 
-            mkdir('../img/camera/history/' . $placeId . '/', 0775);
+            mkdir('../img/camera/history/' . $placeId . '/', 0775,true);
             copy($uploadfile, $historyImgPath);
 
             if ($settingDatas["lineChannel"] != "lineChannel") {
                 if (((int) date("H") > 11 && (int) date("H") < 13) || $heavyRainFlg) {
                     $linebotImgPath = '/img/linebot/' . $placeId . '/' . (string) date('YmdHi00') . '.jpg';
 
-                    mkdir('../img/linebot/' . $placeId . '/', 0775);
+                    mkdir('../img/linebot/' . $placeId . '/', 0775,true);
                     copy($uploadfile, ".." . $linebotImgPath);
 
                     $postData = array(
