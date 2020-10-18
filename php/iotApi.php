@@ -20,7 +20,7 @@ if (isset($_POST['token'])) {
     $pVAL3 = $_POST['val3'];
     $pVAL4 = $_POST['val4'];
 
-    $pPlaceName = $_POST['name'];
+    $pPlaceName = $_POST['PK'];
     $placeId = "1";
     $diff = "0";
     $nowWL = 0;
@@ -79,7 +79,7 @@ if (isset($_POST['token'])) {
             mkdir('../img/camera/history/' . $placeId . '/', 0775,true);
             copy($uploadfile, $historyImgPath);
 
-            if ($settingDatas["lineChannel"] != "lineChannel") {
+            if ($settingDatas["channel"] != "lineChannel") {
                 if (((int) date("H") > 11 && (int) date("H") < 13) || $heavyRainFlg) {
                     $linebotImgPath = '/img/linebot/' . $placeId . '/' . (string) date('YmdHi00') . '.jpg';
 
@@ -101,7 +101,7 @@ if (isset($_POST['token'])) {
                         ),
                     );
 
-                    $result = file_get_contents("http://" . $settingDatas["url"] . "/php/linebot.php", false, stream_context_create($postContext));
+                    $result = file_get_contents("https://" . $settingDatas["url"] . "/php/linebot.php", false, stream_context_create($postContext));
                 }
             }
         }
