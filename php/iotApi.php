@@ -79,7 +79,7 @@ if (isset($_POST['token'])) {
             mkdir('../img/camera/history/' . $placeId . '/', 0775,true);
             copy($uploadfile, $historyImgPath);
 
-            if ($settingDatas["channel"] != "lineChannel") {
+            if ($settingDatas["lineChannel"] != "lineChannel") {
                 if (((int) date("H") > 11 && (int) date("H") < 13) || $heavyRainFlg) {
                     $linebotImgPath = '/img/linebot/' . $placeId . '/' . (string) date('YmdHi00') . '.jpg';
 
