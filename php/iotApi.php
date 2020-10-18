@@ -61,7 +61,7 @@ if (isset($_POST['token'])) {
         $heavyRainFlg = false;
         $hourLaterPrecipitation = '';
 
-        foreach (db_selectPredictPrecipitationHourLater('2') as $val) {
+        foreach (db_selectPredictPrecipitationHourLater($placeId) as $val) {
             if ((float) $val["precipitation"] >= 10) {
                 $heavyRainFlg = true;
             }
