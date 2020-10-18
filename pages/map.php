@@ -56,9 +56,9 @@ foreach ($mapPlaces as $value => $val) {
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="../vendor/leaflet/leaflet.css" />
+    <script src="../vendor/leaflet/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
 
 </head>
 
